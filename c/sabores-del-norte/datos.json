@@ -1,0 +1,44 @@
+{
+  "negocio": "Sabores del Norte",
+  "descripcion": "Cocina chiclayana · Delivery y recojo",
+  "whatsapp": "51958736378",
+  "color": "#9a3b12",
+  "moneda": "S/",
+  "logo": "",
+  "horario": "Lun a sáb · 12:00 a 22:00",
+  "direccion": "Chiclayo",
+  "entrega": "Delivery y recojo",
+  "demo": true,
+  "categorias": [
+    {
+      "nombre": "Entradas",
+      "productos": [
+        { "nombre": "Causa de pollo", "descripcion": "Papa amarilla, ají amarillo, pollo y palta", "precio": 18, "foto": "fotos/causa.svg" },
+        { "nombre": "Chinguirito", "descripcion": "Guitarra deshilachada con cebolla y limón", "precio": 25, "foto": "fotos/chinguirito.svg" }
+      ]
+    },
+    {
+      "nombre": "Fondos",
+      "productos": [
+        { "nombre": "Arroz con pato", "descripcion": "Arroz verde al culantro, pato tierno y sarsa criolla", "precio": 38, "foto": "fotos/arroz-con-pato.svg" },
+        { "nombre": "Cabrito a la norteña", "descripcion": "Con frejoles, arroz y yuca sancochada", "precio": 40, "foto": "fotos/cabrito.svg" },
+        { "nombre": "Ceviche de mero", "descripcion": "Leche de tigre, camote, choclo y cancha", "precio": 42, "foto": "fotos/ceviche.svg" },
+        { "nombre": "Tortilla de raya", "descripcion": "Clásico chiclayano con zarza y yuca", "precio": 30, "foto": "fotos/tortilla.svg" }
+      ]
+    },
+    {
+      "nombre": "Bebidas",
+      "productos": [
+        { "nombre": "Chicha morada (1 L)", "descripcion": "Preparada en casa", "precio": 12, "foto": "fotos/chicha.svg" },
+        { "nombre": "Limonada frozen", "descripcion": "Con hierbabuena", "precio": 10, "foto": "fotos/limonada.svg" }
+      ]
+    },
+    {
+      "nombre": "Postres",
+      "productos": [
+        { "nombre": "King Kong (porción)", "descripcion": "Manjar blanco, dulce de piña y maní", "precio": 9, "foto": "fotos/kingkong.svg" },
+        { "nombre": "Suspiro limeño", "descripcion": "Manjar y merengue al oporto", "precio": 11, "foto": "fotos/suspiro.svg" }
+      ]
+    }
+  ]
+}
