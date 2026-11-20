@@ -31,6 +31,7 @@ Abre `c/nombre-del-negocio/datos.json` y cambia los textos. Reglas:
 - `whatsapp`: con código de país y sin espacios ni `+`: `51958736378`.
 - `color`: código de color como `#9a3b12`. Elige uno oscuro para que el texto blanco se lea bien.
 - `demo`: `false` para clientes reales.
+- `firma`: `true` muestra "Hecho por Asiria" al pie. En el plan Pro, con dominio del cliente, usa `false` para que el catálogo se vea 100 % del cliente.
 
 Si algo queda mal escrito, el catálogo mostrará "No pudimos cargar el catálogo". Revisa comas y comillas.
 

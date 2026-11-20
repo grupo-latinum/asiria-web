@@ -42,6 +42,7 @@ def main():
         'direccion': 'Chiclayo',
         'entrega': 'Delivery y recojo',
         'demo': False,
+        'firma': True,
         'categorias': [
             {'nombre': 'Categoría 1', 'productos': [
                 {'nombre': 'Producto', 'descripcion': 'Descripción corta', 'precio': 10, 'foto': 'fotos/producto.jpg'}

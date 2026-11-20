@@ -66,6 +66,8 @@
       const aviso = $('#aviso-demo');
       aviso.hidden = false;
     }
+    // Plan Pro: "firma": false oculta "Hecho por Asiria" (catálogo de marca blanca)
+    if (datos.firma === false) $('#firma').hidden = true;
     const logo = $('#logo-negocio');
     if (datos.logo) logo.append(el('img', { src: datos.logo, alt: '' }));
     else logo.textContent = datos.negocio.trim().charAt(0).toUpperCase();
