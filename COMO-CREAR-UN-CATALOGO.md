@@ -45,5 +45,5 @@ Si algo queda mal escrito, el catálogo mostrará "No pudimos cargar el catálog
 
 1. Pruébalo en tu computadora: `python -m http.server 8090` y abre `http://localhost:8090/c/nombre-del-negocio/`.
 2. Publica con `git add .`, `git commit` y `git push`. Cloudflare lo pone en línea en uno o dos minutos.
-3. El enlace del cliente queda así: `https://asiria.grupolatinum.com/c/nombre-del-negocio/`.
+3. El enlace del cliente queda así: `https://asiria.pages.dev/c/nombre-del-negocio/`.
 4. Genera su **código QR** con ese enlace (por ejemplo, desde Canva o cualquier generador de QR) y entrégaselo.
