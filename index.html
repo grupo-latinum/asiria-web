@@ -3,38 +3,282 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Asiria · Soluciones con IA</title>
-<meta name="description" content="Asiria, marca de Grupo Latinum S.A.C.: catálogos digitales, automatización, marketing con IA y desarrollo web.">
+<title>Asiria · Catálogos digitales con pedido a WhatsApp</title>
+<meta name="description" content="Creamos tu catálogo digital: tus clientes eligen, ven el total y te envían el pedido listo a tu WhatsApp. Sin apps y sin comisiones. Además, automatización y soluciones con IA para tu negocio.">
+<meta name="theme-color" content="#1a2558">
+<meta property="og:title" content="Asiria · Tu catálogo digital con pedido a WhatsApp">
+<meta property="og:description" content="Tus clientes eligen, ven el total y te envían el pedido listo. Sin apps y sin comisiones.">
+<meta property="og:type" content="website">
 <link rel="icon" href="/img/asiria-favicon.svg" type="image/svg+xml">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--navy:#1a2558;--cu:#d9823b}
-*{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:grid;place-items:center;font-family:Montserrat,system-ui,sans-serif;background:linear-gradient(160deg,#151c3d,var(--navy) 60%,#1d2c72);color:#fff;padding:32px 16px;text-align:center}
-main{max-width:560px}
-img{width:min(320px,80vw);height:auto}
-h1{font-size:clamp(26px,6vw,38px);margin:28px 0 12px;line-height:1.15}
-h1 span{color:#f0a463}
-p{color:#d6dcf5;line-height:1.55;margin:0 0 26px}
-.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-a.btn{display:inline-block;padding:14px 22px;border-radius:30px;font-weight:700;text-decoration:none}
-.wa{background:#1f8f4e;color:#fff}
-.ghost{border:2px solid rgba(255,255,255,.45);color:#fff}
-a:focus-visible{outline:3px solid #f0a463;outline-offset:3px}
-footer{margin-top:40px;font-size:13px;color:#aab3d8}
-footer a{color:#fff}
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/sitio.css?v=1">
+<script>
+  // Aplica las preferencias de accesibilidad antes de pintar la página
+  try {
+    const a = JSON.parse(localStorage.getItem('asiria-a11y') || '{}');
+    const h = document.documentElement;
+    if (a.size) h.dataset.size = a.size;
+    ['contrast', 'links', 'motion', 'spacing'].forEach(k => { if (a[k]) h.dataset[k] = 'on'; });
+  } catch (e) {}
+</script>
+<script src="/js/sitio.js?v=1" defer></script>
 </head>
 <body>
-<main>
-  <img src="/img/asiria-horizontal-blanco.svg" alt="Asiria" width="401" height="100">
-  <h1>Soluciones con IA para <span>tu negocio</span></h1>
-  <p>Catálogos digitales con pedido a WhatsApp, automatización, marketing con IA y desarrollo web. Estamos preparando nuestro sitio; mientras tanto, mira un catálogo de ejemplo o escríbenos.</p>
-  <div class="btns">
-    <a class="btn wa" href="https://wa.me/51958736378?text=Hola%20Asiria%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n">Escríbenos por WhatsApp</a>
-    <a class="btn ghost" href="/c/sabores-del-norte/">Ver catálogo de ejemplo</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></symbol>
+  <symbol id="i-a11y" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5c2.3.6 4.6 1 7 1s4.7-.4 7-1M12 9.5V14m0 0-3 6.5M12 14l3 6.5"/></g></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+<header class="cabecera" id="cabecera">
+  <div class="contenedor cabecera__fila">
+    <a class="marca" href="/" aria-label="Asiria, inicio"><img src="/img/asiria-horizontal-blanco.svg" alt="" width="401" height="100"></a>
+    <nav class="menu" aria-label="Principal">
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#demo">Demo</a>
+      <a href="#precios">Precios</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <div class="cabecera__acciones">
+      <button class="btn-a11y" id="a11yBtn" type="button" aria-expanded="false" aria-controls="a11yPanel">
+        <svg aria-hidden="true"><use href="#i-a11y"/></svg><span class="btn-a11y__texto">Accesibilidad</span>
+      </button>
+      <a class="btn btn--wa btn--chico" href="https://wa.me/51958736378?text=Hola%20Asiria%2C%20quiero%20mi%20cat%C3%A1logo%20digital">
+        <svg aria-hidden="true"><use href="#i-wa"/></svg><span>Escríbenos</span>
+      </a>
+    </div>
   </div>
-  <footer>Asiria es una marca de Grupo Latinum S.A.C. · <a href="mailto:contacto@grupolatinum.com">contacto@grupolatinum.com</a> · <a href="https://grupolatinum.com/privacidad.html">Privacidad</a> · <a href="https://grupolatinum.com/libro-reclamaciones.html">Libro de Reclamaciones</a></footer>
+
+  <section class="a11y" id="a11yPanel" role="dialog" aria-modal="false" aria-labelledby="a11yTitulo" hidden>
+    <div class="a11y__cab">
+      <h2 id="a11yTitulo">Opciones de accesibilidad</h2>
+      <button type="button" class="a11y__cerrar" id="a11yCerrar"><svg aria-hidden="true"><use href="#i-close"/></svg><span class="oculto">Cerrar opciones de accesibilidad</span></button>
+    </div>
+    <fieldset>
+      <legend>Tamaño del texto</legend>
+      <div class="a11y__seg">
+        <button type="button" data-size="" aria-pressed="true">A</button>
+        <button type="button" data-size="lg" aria-pressed="false"><span aria-hidden="true">A+</span><span class="oculto">Grande</span></button>
+        <button type="button" data-size="xl" aria-pressed="false"><span aria-hidden="true">A++</span><span class="oculto">Muy grande</span></button>
+      </div>
+    </fieldset>
+    <ul class="a11y__interruptores">
+      <li><button type="button" role="switch" aria-checked="false" data-toggle="contrast"><span>Alto contraste</span><i aria-hidden="true"></i></button></li>
+      <li><button type="button" role="switch" aria-checked="false" data-toggle="links"><span>Resaltar enlaces</span><i aria-hidden="true"></i></button></li>
+      <li><button type="button" role="switch" aria-checked="false" data-toggle="spacing"><span>Texto más espaciado</span><i aria-hidden="true"></i></button></li>
+      <li><button type="button" role="switch" aria-checked="false" data-toggle="motion"><span>Detener animaciones</span><i aria-hidden="true"></i></button></li>
+    </ul>
+    <button type="button" class="a11y__reset" id="a11yReset">Restablecer</button>
+    <a class="a11y__mas" href="https://grupolatinum.com/accesibilidad.html">Declaración de accesibilidad</a>
+  </section>
+</header>
+
+<main id="contenido">
+
+  <!-- 1. Portada -->
+  <section class="hero">
+    <div class="hero__fondo" aria-hidden="true"></div>
+    <div class="contenedor hero__grid">
+      <div class="hero__texto">
+        <p class="etiqueta"><i aria-hidden="true"></i>Catálogos digitales · Automatización con IA</p>
+        <h1>Tus clientes ya están en WhatsApp. <em>Dales una carta que vende sola.</em></h1>
+        <p class="hero__bajada">Creamos tu catálogo digital: tus clientes eligen, ven el total y te envían el <strong>pedido listo</strong> a tu WhatsApp. Sin descargar apps y sin comisiones por venta.</p>
+        <div class="hero__botones">
+          <a class="btn btn--wa btn--grande" href="https://wa.me/51958736378?text=Hola%20Asiria%2C%20quiero%20mi%20cat%C3%A1logo%20digital">
+            <svg aria-hidden="true"><use href="#i-wa"/></svg>Quiero mi catálogo
+          </a>
+          <a class="btn btn--linea btn--grande" href="#demo">Probar el demo</a>
+        </div>
+        <ul class="hero__puntos">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Listo en 72 horas</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Con tu logo y tus colores</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Código QR incluido</li>
+        </ul>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <div class="burbuja burbuja--1"><b>Nuevo pedido</b><span>2 × Arroz con pato · S/ 76.00</span></div>
+        <div class="burbuja burbuja--2"><svg><use href="#i-wa"/></svg><span>Pedido listo para enviar</span></div>
+        <div class="telefono telefono--hero">
+          <img src="/img/demo-catalogo.jpg" alt="" width="390" height="844">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. El problema -->
+  <section class="seccion" aria-labelledby="t-problema">
+    <div class="contenedor">
+      <p class="sobretitulo">¿Te suena conocido?</p>
+      <h2 id="t-problema" class="titulo">Vender por chat no debería quitarte el día</h2>
+      <ul class="dolores revelar">
+        <li><span class="dolores__emoji" aria-hidden="true">💬</span><h3>“¿Precio?”, “¿qué tienes?”</h3><p>Respondes las mismas preguntas una y otra vez, a cada cliente.</p></li>
+        <li><span class="dolores__emoji" aria-hidden="true">📸</span><h3>Fotos una por una</h3><p>Mandas imágenes sueltas que se pierden entre mensajes.</p></li>
+        <li><span class="dolores__emoji" aria-hidden="true">🧮</span><h3>Cuentas a mano</h3><p>Sumas totales, confirmas cantidades y corriges errores.</p></li>
+        <li><span class="dolores__emoji" aria-hidden="true">⏳</span><h3>Clientes que se van</h3><p>Si tardas en responder, el cliente compra en otro lado.</p></li>
+      </ul>
+      <p class="solucion revelar">Con tu catálogo digital, el cliente <strong>ve todo, elige y te envía el pedido ordenado</strong>. Tú solo confirmas y despachas.</p>
+    </div>
+  </section>
+
+  <!-- 3. Cómo funciona -->
+  <section class="seccion seccion--tinte" id="como-funciona" aria-labelledby="t-como">
+    <div class="contenedor">
+      <p class="sobretitulo">Cómo funciona</p>
+      <h2 id="t-como" class="titulo">De tu lista de productos a recibir pedidos en 3 pasos</h2>
+      <ol class="pasos revelar">
+        <li><span class="pasos__num">1</span><h3>Nos envías tus productos</h3><p>Nombre, precio y una foto de cada uno. Si tienes logo, también. Todo por WhatsApp.</p></li>
+        <li><span class="pasos__num">2</span><h3>Armamos tu catálogo</h3><p>Con tus colores, categorías y buscador. Lo revisas y lo ajustamos contigo.</p></li>
+        <li><span class="pasos__num">3</span><h3>Compartes y vendes</h3><p>Te damos tu enlace y tu código QR para tus redes, tu local o tu vitrina.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 4. Demo en vivo -->
+  <section class="seccion seccion--oscura" id="demo" aria-labelledby="t-demo">
+    <div class="contenedor demo">
+      <div class="demo__texto">
+        <p class="sobretitulo sobretitulo--claro">Pruébalo tú mismo</p>
+        <h2 id="t-demo" class="titulo titulo--claro">Así lo verán tus clientes</h2>
+        <p>Este es un catálogo de ejemplo, funcionando de verdad. Agrega productos, mira cómo se suma el total y abre el pedido.</p>
+        <ul class="lista-check">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Categorías y buscador</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Total automático, sin errores</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Delivery o recojo, dirección y notas</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Funciona en cualquier celular</li>
+        </ul>
+        <a class="btn btn--cobre" href="/c/sabores-del-norte/">Abrir el demo en pantalla completa <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="demo__telefono">
+        <div class="telefono">
+          <iframe src="/c/sabores-del-norte/" title="Catálogo digital de ejemplo: Sabores del Norte" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Cómo llega el pedido -->
+  <section class="seccion" aria-labelledby="t-llega">
+    <div class="contenedor llega">
+      <div class="llega__chat revelar" aria-hidden="true">
+        <div class="chat">
+          <div class="chat__cab"><span class="chat__avatar">S</span><div><b>Tu negocio</b><small>WhatsApp</small></div></div>
+          <div class="chat__cuerpo">
+            <div class="chat__msg">
+              <p>Hola Sabores del Norte 👋, quiero hacer este pedido:</p>
+              <p>• 2 × Arroz con pato — S/ 76.00<br>• 1 × Ceviche de mero — S/ 42.00<br>• 2 × Chicha morada — S/ 16.00</p>
+              <p><b>Total: S/ 134.00</b><br>Entrega: Delivery<br>Dirección: Av. Balta 123<br>Notas: sin ají, por favor</p>
+              <small>12:41 ✓✓</small>
+            </div>
+          </div>
+        </div>
+        <p class="nota-ejemplo">Mensaje de ejemplo</p>
+      </div>
+      <div class="llega__texto">
+        <p class="sobretitulo">El resultado</p>
+        <h2 id="t-llega" class="titulo">El pedido te llega ordenado, con total y datos de entrega</h2>
+        <p>Nada de adivinar ni sumar. Lees el mensaje, confirmas y despachas. El pago lo coordinas directamente con tu cliente, como siempre: <strong>no cobramos comisión por tus ventas</strong>.</p>
+        <p class="ideal">Ideal para:</p>
+        <ul class="rubros">
+          <li>Restaurantes</li><li>Pastelerías</li><li>Cafeterías</li><li>Bodegas y minimarkets</li><li>Boutiques</li><li>Ferreterías</li><li>Florerías</li><li>Estética y belleza</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Precios -->
+  <section class="seccion seccion--tinte" id="precios" aria-labelledby="t-precios">
+    <div class="contenedor">
+      <p class="sobretitulo">Planes</p>
+      <h2 id="t-precios" class="titulo">Elige cómo quieres empezar</h2>
+      <div class="planes revelar">
+        <article class="plan plan--destacado">
+          <p class="plan__cinta">Precio fundador · cupos limitados</p>
+          <h3>Catálogo digital</h3>
+          <p class="plan__precio"><b>S/ 50</b> <s>S/ 150</s></p>
+          <p class="plan__nota">Pago único. A cambio, nos autorizas a mostrar tu catálogo como ejemplo de nuestro trabajo.</p>
+          <ul class="lista-check">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Hasta 20 productos</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Pedido directo a tu WhatsApp</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Código QR para tu local</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Listo en 72 horas</li>
+          </ul>
+          <a class="btn btn--wa" href="https://wa.me/51958736378?text=Hola%20Asiria%2C%20quiero%20un%20cupo%20de%20negocio%20fundador">
+            <svg aria-hidden="true"><use href="#i-wa"/></svg>Quiero mi cupo
+          </a>
+        </article>
+        <article class="plan">
+          <h3>Catálogo Pro</h3>
+          <p class="plan__precio"><b class="plan__cotiza">A cotizar</b></p>
+          <p class="plan__nota">Para negocios que quieren una imagen 100 % propia.</p>
+          <ul class="lista-check">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Con tu propio dominio</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Sin la firma de Asiria</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Más productos y categorías</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Acompañamiento en el lanzamiento</li>
+          </ul>
+          <a class="btn btn--linea-oscura" href="https://wa.me/51958736378?text=Hola%20Asiria%2C%20quiero%20cotizar%20el%20Cat%C3%A1logo%20Pro">Cotizar</a>
+        </article>
+        <article class="plan">
+          <h3>Web + IA</h3>
+          <p class="plan__precio"><b class="plan__cotiza">A cotizar</b></p>
+          <p class="plan__nota">Cuando tu negocio necesita más que un catálogo.</p>
+          <ul class="lista-check">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Sitio web profesional</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Asistente con IA para atender consultas</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Automatización de tareas repetitivas</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Marketing digital con IA</li>
+          </ul>
+          <a class="btn btn--linea-oscura" href="https://wa.me/51958736378?text=Hola%20Asiria%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20Web%20%2B%20IA">Cotizar</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Preguntas -->
+  <section class="seccion" id="preguntas" aria-labelledby="t-preguntas">
+    <div class="contenedor contenedor--angosto">
+      <p class="sobretitulo">Preguntas frecuentes</p>
+      <h2 id="t-preguntas" class="titulo">Lo que normalmente nos preguntan</h2>
+      <div class="faq">
+        <details><summary>¿Mis clientes tienen que descargar algo?</summary><p>No. El catálogo se abre como una página web desde cualquier celular o computadora: con un enlace o escaneando tu código QR.</p></details>
+        <details><summary>¿Cobran comisión por cada pedido?</summary><p>No. Los pedidos llegan directo a tu WhatsApp y el pago lo coordinas tú con tu cliente, por el medio que ya usas.</p></details>
+        <details><summary>¿Qué necesito para empezar?</summary><p>El nombre de tu negocio, tu número de WhatsApp, tu horario y zona de entrega, y tu lista de productos con precio y una foto de cada uno. Si tienes logo, mejor.</p></details>
+        <details><summary>¿Puedo cambiar precios o productos después?</summary><p>Sí. Nos envías los cambios por WhatsApp y los publicamos por ti.</p></details>
+        <details><summary>¿Puedo tener mi propio dominio?</summary><p>Sí, con el plan Pro tu catálogo puede estar en tu propio dominio (por ejemplo, tunegocio.com) y sin la firma de Asiria.</p></details>
+        <details><summary>¿Solo trabajan con negocios de Chiclayo?</summary><p>No. Trabajamos de forma remota con negocios de todo el Perú y Latinoamérica.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Llamado final -->
+  <section class="final" aria-labelledby="t-final">
+    <div class="contenedor final__caja">
+      <img src="/img/asiria-simbolo-color.svg" alt="" width="64" height="64" class="final__simbolo">
+      <h2 id="t-final">Empieza a recibir pedidos ordenados esta semana</h2>
+      <p>Escríbenos, te mostramos el demo y armamos tu catálogo en 72 horas.</p>
+      <a class="btn btn--wa btn--grande" href="https://wa.me/51958736378?text=Hola%20Asiria%2C%20quiero%20mi%20cat%C3%A1logo%20digital">
+        <svg aria-hidden="true"><use href="#i-wa"/></svg>Escríbenos por WhatsApp
+      </a>
+    </div>
+  </section>
 </main>
+
+<footer class="pie">
+  <div class="contenedor pie__fila">
+    <img src="/img/asiria-horizontal-blanco.svg" alt="Asiria" width="160" height="40">
+    <p>Construyendo soluciones con IA.<br><a href="mailto:contacto@grupolatinum.com">contacto@grupolatinum.com</a> · <a href="https://www.facebook.com/AsiriaVirtual">Facebook</a> · <a href="https://www.instagram.com/asiria.ia/">Instagram</a></p>
+    <p class="pie__legal">© <span id="anio">2026</span> Asiria, una marca de Grupo Latinum S.A.C. · <a href="https://grupolatinum.com/privacidad.html">Privacidad</a> · <a href="https://grupolatinum.com/libro-reclamaciones.html">Libro de Reclamaciones</a></p>
+  </div>
+</footer>
+
+<a class="wa-flotante" href="https://wa.me/51958736378?text=Hola%20Asiria%2C%20quiero%20mi%20cat%C3%A1logo%20digital" aria-label="Escríbenos por WhatsApp">
+  <svg aria-hidden="true"><use href="#i-wa"/></svg>
+</a>
 </body>
 </html>
