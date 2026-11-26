@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/sitio.css?v=1">
+<link rel="stylesheet" href="/css/sitio.css?v=2">
 <script>
   // Aplica las preferencias de accesibilidad antes de pintar la página
   try {
@@ -23,7 +23,7 @@
     ['contrast', 'links', 'motion', 'spacing'].forEach(k => { if (a[k]) h.dataset[k] = 'on'; });
   } catch (e) {}
 </script>
-<script src="/js/sitio.js?v=1" defer></script>
+<script src="/js/sitio.js?v=2" defer></script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -88,6 +88,10 @@
       <div class="hero__texto">
         <p class="etiqueta"><i aria-hidden="true"></i>Catálogos digitales · Automatización con IA</p>
         <h1>Tus clientes ya están en WhatsApp. <em>Dales una carta que vende sola.</em></h1>
+        <p class="rotador"><span class="rotador__fijo">Hecho para</span>
+          <span class="rotador__caja" aria-hidden="true"><span class="rotador__palabra" id="rubro">restaurantes</span></span>
+          <span class="oculto">restaurantes, pastelerías, cafeterías, bodegas, boutiques, ferreterías y florerías</span>
+        </p>
         <p class="hero__bajada">Creamos tu catálogo digital: tus clientes eligen, ven el total y te envían el <strong>pedido listo</strong> a tu WhatsApp. Sin descargar apps y sin comisiones por venta.</p>
         <div class="hero__botones">
           <a class="btn btn--wa btn--grande" href="https://wa.me/51958736378?text=Hola%20Asiria%2C%20quiero%20mi%20cat%C3%A1logo%20digital">
@@ -111,6 +115,14 @@
     </div>
   </section>
 
+  <!-- Cinta de rubros (decorativa) -->
+  <div class="cinta" aria-hidden="true">
+    <div class="cinta__pista">
+      <ul><li>🍽️ Restaurantes</li><li>🎂 Pastelerías</li><li>☕ Cafeterías</li><li>🛒 Bodegas y minimarkets</li><li>👗 Boutiques</li><li>🔧 Ferreterías</li><li>💐 Florerías</li><li>💅 Estética y belleza</li><li>🥖 Panaderías</li><li>🍦 Heladerías</li></ul>
+      <ul><li>🍽️ Restaurantes</li><li>🎂 Pastelerías</li><li>☕ Cafeterías</li><li>🛒 Bodegas y minimarkets</li><li>👗 Boutiques</li><li>🔧 Ferreterías</li><li>💐 Florerías</li><li>💅 Estética y belleza</li><li>🥖 Panaderías</li><li>🍦 Heladerías</li></ul>
+    </div>
+  </div>
+
   <!-- 2. El problema -->
   <section class="seccion" aria-labelledby="t-problema">
     <div class="contenedor">
@@ -126,8 +138,31 @@
     </div>
   </section>
 
+  <!-- 2b. Comparación -->
+  <section class="seccion seccion--tinte" aria-labelledby="t-compara">
+    <div class="contenedor">
+      <p class="sobretitulo">La diferencia</p>
+      <h2 id="t-compara" class="titulo">Fotos sueltas y PDF frente a un catálogo que vende</h2>
+      <div class="compara revelar">
+        <table>
+          <caption class="oculto">Comparación entre vender con fotos sueltas o PDF y vender con un catálogo de Asiria</caption>
+          <thead>
+            <tr><th scope="col"><span class="oculto">Aspecto</span></th><th scope="col" class="compara__antes">Fotos sueltas o PDF</th><th scope="col" class="compara__asiria">Catálogo Asiria</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Ver productos y precios</th><td data-col="Fotos sueltas o PDF">Buscando entre mensajes o descargando un archivo pesado</td><td data-col="Catálogo Asiria">Todo en una página, con categorías y buscador</td></tr>
+            <tr><th scope="row">Total del pedido</th><td data-col="Fotos sueltas o PDF">Lo sumas tú, a mano</td><td data-col="Catálogo Asiria">Se calcula solo, sin errores</td></tr>
+            <tr><th scope="row">Cómo te llega el pedido</th><td data-col="Fotos sueltas o PDF">En varios mensajes desordenados</td><td data-col="Catálogo Asiria">En un solo mensaje, con entrega y notas</td></tr>
+            <tr><th scope="row">Cambiar un precio</th><td data-col="Fotos sueltas o PDF">Rehacer y reenviar fotos o el PDF</td><td data-col="Catálogo Asiria">Se cambia en un solo lugar y listo</td></tr>
+            <tr><th scope="row">Imagen de tu negocio</th><td data-col="Fotos sueltas o PDF">Fotos de distinta calidad y formato</td><td data-col="Catálogo Asiria">Con tu logo, tus colores y tu código QR</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
   <!-- 3. Cómo funciona -->
-  <section class="seccion seccion--tinte" id="como-funciona" aria-labelledby="t-como">
+  <section class="seccion" id="como-funciona" aria-labelledby="t-como">
     <div class="contenedor">
       <p class="sobretitulo">Cómo funciona</p>
       <h2 id="t-como" class="titulo">De tu lista de productos a recibir pedidos en 3 pasos</h2>
@@ -162,15 +197,29 @@
     </div>
   </section>
 
-  <!-- 5. Cómo llega el pedido -->
-  <section class="seccion" aria-labelledby="t-llega">
+  <!-- 5. Cómo llega el pedido, por rubro -->
+  <section class="seccion" id="rubros" aria-labelledby="t-llega">
     <div class="contenedor llega">
-      <div class="llega__chat revelar" aria-hidden="true">
+      <div class="llega__texto">
+        <p class="sobretitulo">El resultado</p>
+        <h2 id="t-llega" class="titulo">El pedido te llega ordenado, con total y datos de entrega</h2>
+        <p>Nada de adivinar ni sumar. Lees el mensaje, confirmas y despachas. El pago lo coordinas directamente con tu cliente, como siempre: <strong>no cobramos comisión por tus ventas</strong>.</p>
+        <p class="ideal" id="t-rubros">Mira cómo llega en tu rubro:</p>
+        <div class="pestanas" role="tablist" aria-labelledby="t-rubros">
+          <button type="button" role="tab" id="tab-restaurante" aria-controls="panel-rubro" aria-selected="true" data-rubro="restaurante">🍽️ Restaurante</button>
+          <button type="button" role="tab" id="tab-pasteleria" aria-controls="panel-rubro" aria-selected="false" tabindex="-1" data-rubro="pasteleria">🎂 Pastelería</button>
+          <button type="button" role="tab" id="tab-bodega" aria-controls="panel-rubro" aria-selected="false" tabindex="-1" data-rubro="bodega">🛒 Bodega</button>
+          <button type="button" role="tab" id="tab-boutique" aria-controls="panel-rubro" aria-selected="false" tabindex="-1" data-rubro="boutique">👗 Boutique</button>
+        </div>
+        <p class="rubro-texto" id="rubro-texto">Tu carta con fotos y precios. El cliente arma su pedido para delivery o recojo, con sus indicaciones.</p>
+      </div>
+      <div class="llega__chat" id="panel-rubro" role="tabpanel" aria-labelledby="tab-restaurante" tabindex="0">
         <div class="chat">
-          <div class="chat__cab"><span class="chat__avatar">S</span><div><b>Tu negocio</b><small>WhatsApp</small></div></div>
+          <div class="chat__cab"><span class="chat__avatar" id="chat-avatar" aria-hidden="true">🍽️</span><div><b>Tu negocio</b><small id="chat-estado">en línea</small></div></div>
           <div class="chat__cuerpo">
-            <div class="chat__msg">
-              <p>Hola Sabores del Norte 👋, quiero hacer este pedido:</p>
+            <div class="chat__escribiendo" id="chat-escribiendo" hidden aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="chat__msg" id="chat-msg">
+              <p>Hola 👋, quiero hacer este pedido:</p>
               <p>• 2 × Arroz con pato — S/ 76.00<br>• 1 × Ceviche de mero — S/ 42.00<br>• 2 × Chicha morada — S/ 16.00</p>
               <p><b>Total: S/ 134.00</b><br>Entrega: Delivery<br>Dirección: Av. Balta 123<br>Notas: sin ají, por favor</p>
               <small>12:41 ✓✓</small>
@@ -178,15 +227,6 @@
           </div>
         </div>
         <p class="nota-ejemplo">Mensaje de ejemplo</p>
-      </div>
-      <div class="llega__texto">
-        <p class="sobretitulo">El resultado</p>
-        <h2 id="t-llega" class="titulo">El pedido te llega ordenado, con total y datos de entrega</h2>
-        <p>Nada de adivinar ni sumar. Lees el mensaje, confirmas y despachas. El pago lo coordinas directamente con tu cliente, como siempre: <strong>no cobramos comisión por tus ventas</strong>.</p>
-        <p class="ideal">Ideal para:</p>
-        <ul class="rubros">
-          <li>Restaurantes</li><li>Pastelerías</li><li>Cafeterías</li><li>Bodegas y minimarkets</li><li>Boutiques</li><li>Ferreterías</li><li>Florerías</li><li>Estética y belleza</li>
-        </ul>
       </div>
     </div>
   </section>
